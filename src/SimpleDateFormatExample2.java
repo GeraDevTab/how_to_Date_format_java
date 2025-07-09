@@ -5,6 +5,7 @@ public class SimpleDateFormatExample2 {
     public static void main(String[] args) {
         Date date = new Date();
         System.out.println("Date format");
+
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         String strDate = formatter.format(date);
         System.out.println("Date Format with MM/dd/yyyy : " + strDate);
@@ -13,5 +14,16 @@ public class SimpleDateFormatExample2 {
         strDate = formatter.format(date);
         System.out.println("Date Format with dd-M-yyyy hh:mm:ss : " + strDate);
 
+        formatter = new SimpleDateFormat("dd MMMM yyyy");
+        strDate = formatter.format(date);
+        System.out.println("Date Format with dd MMMM yyyy : " + strDate);
+
+        formatter = new SimpleDateFormat("dd MMMM yyyy zzzz");
+        strDate = formatter.format(date);
+        System.out.println("Date Format with dd MMMM yyyy zzzz : " + strDate);
+
+        formatter = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss z");
+        strDate = formatter.format(date);
+        System.out.println("Date Format with E, dd MMMM yyyy HH:mm:ss z : " + strDate);
     }
 }
